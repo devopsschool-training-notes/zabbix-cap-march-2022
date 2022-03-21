@@ -1,0 +1,82 @@
+Rajesh Kumar
+==========================
+
+
+Start Time - 10 AM IST
+End Time - 5:30 PM IST
+
+LUNCH - 1:00 PM - 2:00 PM IST
+BREAK - 
+	 11.30 AM	- 15 mins
+	 3.30 PM 	- 15 mins
+=============================
+Lab - AWS 
+
+Assignment
+---------------------
+Difference Between Monitoring & Obserbability?
+	-- INFRA DATA
+	-- LOG DATA
+	-- APM DATA
+	-- SYNTA
+	-- BROWSWER
+
+Diff Bet v5 and V6
+
+=====================================
+Audit Log -> 
+	Which Entity -> Adding & Removing Macros
+
+
+
+=========================================
+Demo for Zabbix Server
+-----------------
+Linux - 
+	OS - Ubuntu 20.X
+	DB - mysql
+	Web - Apache
+
+
+IP - 3.110.176.72
+Username - ubuntu
+Password - Key - PEM 
+		For SSH -> 
+		- PUTTY -> PPK
+		- GITBASH -> PEM
+		$ ssh -i rajesh-mumbai.pem ubuntu@3.110.176.72
+		$ sudo -s 
+		
+		$ https://www.devopsschool.com/blog/install-configure-zabbix-server-in-ubuntu/
+
+
+		Mysql user name - root / DevOpsSchool$123
+
+
+		Database	For Zabbix Server
+		-------------
+		Database Name - zabbix
+		Database user - zabbix
+		password - DevOpsSchool$123
+		Database host - 3.110.176.72 / localhost / 127.0.0.1
+		Database port - 3306
+
+		mysql -uroot -p
+		mysql> show databases;
+		mysql> use zabbix;
+		mysql> show tables;
+
+		http://3.110.176.72/zabbix
+
+
+
+
+
+
+
+
+
+
+
+
+
