@@ -83,7 +83,7 @@ Chatur Jibhau Patil		13.235.79.252
 nirosha				15.207.20.111
 Sanjay G- 				65.1.92.43 
 Parimala 				15.206.90.25
-Gaurav					65.0.125.145	
+Gaurav				65.0.125.145	
 Sanjay Paswan			3.110.136.26
 Shilpa				13.233.69.183		
 
@@ -123,8 +123,21 @@ Shilpa				52.66.17.200
 
 Zabbix Agent - Windows 2019
 ==================================================
+user name - administrator
 
-
+Priyanka K				52.66.255.40		;mElZ4USsCfG;WDlscb-cAXhNK6K!eYF			
+Vidya Gaikwad			3.108.54.210		SWgk9?i$?o%QpYKg6I68k?fc(RAxY!hm	
+furkan khalil momin		13.233.23.171		hUXAKnmNYp(-br=wvK43!LgJmj@-Vqhi	
+Prem Singh Rawat		13.232.171.142		wYmG.VerxU(8k@&wE(BN4-%56KVQLW(E		
+Kayala Adinarayana		13.127.62.78		VR9YKnkdWdAP%kTsTcBr()JjuBRF-SP!
+		
+Chatur Jibhau Patil		3.110.222.140	
+nirosha				13.232.122.23		kC7uU$LhH&?kp6pD!=teuKGEGIr-MWU8				
+Sanjay G- 				65.0.99.157		pg4!g.q=dQ)7rS.uVc=AfIs48HItS6zM	
+Parimala 				3.109.209.158		KemT$u?uOyl9oFL8&CYhJtjWNh!tjkgx	
+Gaurav				3.108.237.61		w@$ZpY4*73ppOTn8&RcQhQfGs!&DNTYH			
+Sanjay Paswan			3.109.122.68		jlY9kau2gje=kIIx3h7t*xfKU(hjEuE&
+Shilpa				3.110.154.222		hIMIWC@qDJBV!F*wh-T63H.Z!jZfn7WG			
 
 Step 1 - How to install Zabbix Agent in Linux? Centos		- DONE
 13.233.206.103	OR 172.31.10.229
@@ -141,4 +154,5 @@ administrator / bIvLiUUQPDq&nsDJt.CxYn;k-WM.B!uk
 Error & Solution
 ================
 https://www.devopsschool.com/blog/zabbix-errors-and-solution-database/
+
 
