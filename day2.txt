@@ -1,0 +1,78 @@
+Demo & Lab
+======================
+1. Create a host group							DONE
+2. Add in Existing host into Hostgroup		DONE
+3. Add a Template to a Host					DONE
+4. Check the values of Items check run by agent in the host at Latest data
+5. Check the Graph with a values of Items check run by agent Graph
+
+=================================================
+Apache HTTP
+nginx
+mysql
+docker
+kubernetes
+tomcat
+networking devices
+===========================================
+How to monitor Apache HTTP using Zabbix?
+How to gather Apache HTTP Metrices using Zabbix?
+How to gather Apache HTTP Metrices using Zabbix Items using Zabbix Agent?
+ 
+Apache HTTP Metrices -->>> ????
+
+Zabbix Items For Apache CHECK--->>>> ????	DONE
+Zabbix Agent ---> ?????		 DONE
+
+How to expose Apache HTTP Metrices? to 
+					Zabbix Agent
+					or
+					Anyone
+- https://httpd.apache.org/docs/2.4/mod/mod_status.html
+============================
+
+
+Step 1 - Install Apache
+
+Step 2 - Enable mod_status module for HTTp metrices
+
+Step 3 - Ask Zabbix server to get a metrices from HTTP endpoint
+
+Step 4 - Validate in Zaabix Latest data
+
+https://www.devopsschool.com/blog/how-to-monitor-apache-http-using-zabbix/
+
+
+server-status?auto
+server-status?auto
+
+http://13.233.206.103/
+
+http://13.233.206.103/server-status?auto		RIGHT
+
+http://3.110.176.72/server-status?auto		WRONG
+
+
+
+LoadModule status_module modules/mod_status.so
+<Location /server-status>
+   SetHandler server-status
+   Order deny,allow
+   Deny from all
+   Allow from all
+   Allow from 172.31.23.45
+   Allow from 13.233.206.103
+</Location>
+ExtendedStatus On
+
+
+
+
+
+
+
+
+
+
+ 
+
