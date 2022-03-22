@@ -85,8 +85,7 @@ Sanjay G- 				65.1.92.43
 Parimala 				15.206.90.25
 Gaurav					65.0.125.145	
 Sanjay Paswan			3.110.136.26
-
-Shilpa				
+Shilpa				13.233.69.183		
 
 Extra Servers
 =============================
@@ -107,6 +106,19 @@ https://www.devopsschool.com/blog/how-to-install-configure-zabbix-agent
 
 Zabbix Agent - Centos 7
 ==================================================
+
+Priyanka K				52.66.146.70		
+Vidya Gaikwad			3.111.196.196		
+furkan khalil momin		3.111.197.176	
+Prem Singh Rawat		35.154.107.34		
+Kayala Adinarayana		3.110.197.149	
+Chatur Jibhau Patil		13.233.149.112	
+nirosha				15.206.153.72		
+Sanjay G- 				3.110.215.149	
+Parimala 				3.6.91.148	
+Gaurav				13.232.219.231		
+Sanjay Paswan			15.206.100.93
+Shilpa				52.66.17.200
 
 
 Zabbix Agent - Windows 2019
@@ -129,3 +141,4 @@ administrator / bIvLiUUQPDq&nsDJt.CxYn;k-WM.B!uk
 Error & Solution
 ================
 https://www.devopsschool.com/blog/zabbix-errors-and-solution-database/
+
