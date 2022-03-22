@@ -31,6 +31,8 @@ Audit Log ->
 
 =========================================
 Demo for Zabbix Server
+---------------------
+https://www.devopsschool.com/blog/install-configure-zabbix-server-in-ubuntu/
 -----------------
 Linux - 
 	OS - Ubuntu 20.X
@@ -38,7 +40,7 @@ Linux -
 	Web - Apache
 
 
-IP - 3.110.176.72
+IP - 3.110.176.72	OR 172.31.10.229
 Username - ubuntu
 Password - Key - PEM 
 		For SSH -> 
@@ -69,23 +71,61 @@ Password - Key - PEM
 		http://3.110.176.72/zabbix
 
 
+Zabbix Servers - Ubuntu
+==================================================
 
-Priyanka K			3.110.171.113
-Vidya Gaikwad			13.235.83.242
-furkan khalil momin	13.233.26.64
-Prem Singh Rawat		13.232.204.225
-Kayala Adinarayana	15.206.90.144
-Chatur Jibhau Patil	65.1.3.98
-nirosha				35.154.236.245
+Priyanka K				65.0.97.74
+Vidya Gaikwad			13.232.223.173
+furkan khalil momin		3.110.48.237
+Prem Singh Rawat		3.110.121.215
+Kayala Adinarayana		3.110.218.118
+Chatur Jibhau Patil		13.235.79.252
+nirosha				15.207.20.111
+Sanjay G- 				65.1.92.43 
+Parimala 				15.206.90.25
+Gaurav					65.0.125.145	
+Sanjay Paswan			3.110.136.26
 
-15.206.147.184
-3.110.222.114
-35.154.169.228	
-3.109.200.22
+Shilpa				
+
+Extra Servers
+=============================
 
 
 
 
+=============================================================================
+How to install Zabbix Agent 6 in 
+=============================================================================
+- Centos7
+- Ubuntu
+- Windows 2019
+==========================================================
+https://www.devopsschool.com/blog/how-to-install-configure-zabbix-agent
+==========================================================
+
+
+Zabbix Agent - Centos 7
+==================================================
+
+
+Zabbix Agent - Windows 2019
+==================================================
 
 
 
+Step 1 - How to install Zabbix Agent in Linux? Centos		- DONE
+13.233.206.103	OR 172.31.10.229
+centos
+
+$ ssh -i rajesh-mumbai.pem centos@13.233.206.103
+		
+Step 2 - How to install Zabbix Agent in Windows?			- DONE
+3.7.70.36
+administrator / bIvLiUUQPDq&nsDJt.CxYn;k-WM.B!uk
+
+
+
+Error & Solution
+================
+https://www.devopsschool.com/blog/zabbix-errors-and-solution-database/
