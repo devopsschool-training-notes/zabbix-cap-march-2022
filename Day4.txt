@@ -1,0 +1,262 @@
+Kubernetes Monitoring
+===============================
+Method 1 - Using Zabbix in build Template
+ 
+### Step 1 - Setup a Kubernetes  Clustor
+
+### Step 2 - How Kubernetes Monitoring Works?
+All the moniotring is done using 
+- Docker - Its a running deamon, you can find in each host
+- Kubelet - Its a running deamon, you can find in each host
+- API of Kubernetes Components such API server,Controller manager, Scheduler etc
+
+### Step 3 - Understand How to fetch metrices from API in Kubernetes?
+You need 2 information
+- API Adress(URL). ie. {$KUBE.API.SERVER.URL}
+- Access (Password - Token - Certificate). ie. {$KUBE.API.TOKEN}
+
+### Step 4 - Decice what you want to monitor? Choose a template accordingly.
+
+- Kubernetes API server by HTTP
+- Kubernetes cluster state by HTTP	
+- Kubernetes Controller manager by HTTP	
+- Kubernetes kubelet by HTTP	
+- Kubernetes nodes by HTTP	
+- Kubernetes Scheduler by HTTP
+
+Step 5 - Add Host in Zabbix and Choose Kubernetes template and Set your template Macros as the per setup
+
+Method 2 - Using prometheus operator in Kubernetes clustor & Zabbix Integration with prometheus 
+- prometheus is written in golang
+- kubernetes is written in golang
+- prometheus is a cncf project like kubernetes
+- prometheus integ with kubernetes is very powerful compare to all
+- To monitor kubernetes, prometheus has kubernetes operator which is very powerful and easy 
+
+https://www.zabbix.com/integrations/prometheus
+
+Method 3 - Using Zabbix operator  - Under Developement
+
+
+
+==================================
+How to setup Kubernetes clustor?
+https://www.devopsschool.com/blog/setting-up-kubernetes-clusters-using-kubeadm-manual-way-in-rhel-7-centos7/
+
+
+Master
+====================
+
+Priyanka K					3.110.209.77	
+Vidya Gaikwad				13.233.16.134
+furkan khalil momin			52.66.251.4
+Prem Singh Rawat			65.1.147.168
+Kayala Adinarayana			13.127.58.172	
+Chatur Jibhau Patil				65.0.105.251
+nirosha				3.111.53.207		
+Sanjay G- 				13.126.166.132	
+Parimala 				15.207.115.213			
+Gaurav				35.154.176.31		
+Sanjay Paswan			65.2.153.43
+Shilpa				3.110.55.121
+
+Master
+====================
+
+
+13.233.39.68 - MASTER	= 172.31.2.16
+
+3.110.194.183 - WORKER
+
+https://github.com/sleepka/zabbix-kubernetes-monitoring
+
+
+
+- SNMP 
+============================================
+
+
+
+SNMP Agent
+===================
+UBuntu Server
+	- Install a SNMP Agent
+	- config a SNMP Agent
+	- Start a SNMP Agent
+
+SNMP Manager
+===================
+Zabbix Server
+	- SNGP Digest - Already there
+	- ADD a HOSt 
+			with Interface of SNMP
+	- Add a Template to a Host
+	- See a data from SNMP Ubuntu at latest Data
+
+
+43.204.25.31
+=====================
+How to install and configure snmp agent
+- https://www.devopsschool.com/blog/how-to-install-and-configure-snmp-agent/
+
+How to configure and enable monitoring using SNMP in Zabbix?
+https://www.devopsschool.com/blog/how-to-configure-and-enable-monitoring-using-snmp-in-zabbix/
+
+How to configure Zabbix Linux Agent with SNMP protocol?
+https://www.devopsschool.com/blog/how-to-configure-zabbix-linux-agent-with-snmp-protocol/
+
+
+agentAddress udp:161,udp6:[::1]:161
+rocommunity GokuBlack
+syslocation Universe10 - IT Room
+sysContact Rajesh <rajesh@devopsschool.com>;
+
+snmpwalk -v2c -c GokuBlack 127.0.0.1
+
+- Kubernetes Monitoring
+
+- SNMP 
+
+- Proxy
+==================================
+https://www.devopsschool.com/blog/install-and-configure-zabbix-proxy-on-ubuntu-20-x/
+
+================================= 43.204.25.31 ===============
+
+=========================== Proxy Server Chnages ========================
+Step 1 - Setup a mySql Server
+https://www.devopsschool.com/blog/how-to-install-mysql-server-and-client-on-ubuntu/
+
+Step 2 - Setup a Zabbix Proxy Database
+$ mysql -u root -p
+Enter password: <PRESS ENTER>
+mysql> create database zabbix character set utf8 collate utf8_bin;
+mysql> create user zabbix@localhost identified by 'DevOpsSchool$123';
+mysql> grant all privileges on zabbix.* to zabbix@localhost;
+mysql> quit;
+
+Step 3 - Setup a proxy server
+
+# sudo -s [ Become a root user ]
+$ wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-1+ubuntu20.04_all.deb
+$ dpkg -i zabbix-release_6.0-1+ubuntu20.04_all.deb
+$ apt update
+$ apt-get install zabbix-proxy-mysql zabbix-sql-scripts  
+
+Step 4 - CREATING PROXY DATABASE
+
+$ cat /usr/share/doc/zabbix-sql-scripts/mysql/proxy.sql | mysql -uzabbix -p'DevOpsSchool$123' zabbix
+
+Step 5. DATABASE CONFIGURATION FOR ZABBIX PROXY
+
+$ vi /etc/zabbix/zabbix_proxy.conf 
+
+Server=3.110.176.72
+Hostname=Zabbix proxy
+LogFile=/var/log/zabbix/zabbix_proxy.log
+DBHost=localhost
+DBName=zabbix
+DBUser=zabbix
+DBPassword=DevOpsSchool$123
+
+Step 6 - Start and enable proxy service
+$ systemctl restart zabbix-proxy
+$ systemctl enable zabbix-proxy
+$ systemctl status zabbix-proxy
+
+=========================== Zabbix Server Chnages ========================
+
+Step 1 - Go to "Administration" ==> "Proxies"
+
+Step 2 - Create proxy using ACTIVE
+Proxy Mode - Active
+Proxy Address - 43.204.25.31 (Ip Address of Proxy Server)
+
+OR
+
+Step 3 - Create proxy using Passive
+Proxy Mode - Passive
+Interface - 
+	-- IP address - 43.204.25.31 (Ip Address of Proxy Server)
+	-- localhost
+	-- 	Port  - 10051
+
+
+=======================
+Agent = 13.233.39.68 = centos
+How to install Zabbix Agent in Centos?
+-------------------------------------
+
+
+Proxy ---> Active --> Server
+
+Agent ---> Proxy
+
+
+
+
+
+- Proxy
+- ansible monitoring
+- Actions
+- Graph
+- Creating
+	- Template
+	- Items
+	- Triggers
+- More topics
+
+- SYNTETHIC MON
+
+
+
+
+on by zero at "/last(//system.swap.total[memTotalSwap.0])*100"
+
+last - Function
+system.swap.total
+memTotalSwap
+system.swap.total[memTotalSwap.0]
+
+What is swap memory	0%
+----------------------
+
+Transforming
+last
+	of system.swap.total[memTotalSwap.0]
+	X
+	100
+
+Cannot evaluate expression: division by zero at
+ 
+"/last(//system.swap.total[memTotalSwap.0])*100"
+
+last(//system.swap.free[memAvailSwap.0])/last(//system.swap.total[memTotalSwap.0])*100
+
+===========================
+5 X 0 == 0 (No matrx u would get it)
+
+
+Transaction check error:
+  file /etc/logrotate.d/zabbix-agent from install of zabbix50-agent-5.0.21-1.el7.x86_64 conflicts with file from package zabbix-agent-6.0.0-1.el7.x86_64
+  file /var/log/zabbix from install of zabbix50-agent-5.0.21-1.el7.x86_64 conflicts with file from package zabbix-agent-6.0.0-1.el7.x86_64
+  file /usr/lib/systemd/system/zabbix-agent.service from install of zabbix50-agent-5.0.21-1.el7.x86_64 conflicts with file from package zabbix-agent-6.0.0-1.el7.x86_64
+  file /usr/sbin/zabbix_agentd from install of zabbix50-agent-5.0.21-1.el7.x86_64 conflicts with file from package zabbix-agent-6.0.0-1.el7.x86_64
+  file /usr/share/man/man8/zabbix_agentd.8.gz from install of zabbix50-agent-5.0.21-1.el7.x86_64 conflicts with file from package zabbix-agent-6.0.0-1.el7.x86_64
+
+====================
+$ yum remove zabbix_agent
+$ rpm -qa
+$ rpm -qa | grep zabbix
+$ rpm -e zabbix50-5.0.21-1.el7.x86_64
+$ rpm -e zabbix-agent-6.0.0-1.el7.x86_64
+
+
+
+
+Error Summary
+-------------
+
+
+
+
